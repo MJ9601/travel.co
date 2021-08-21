@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,700&display=swap');
+
+*{
+    text-decoration: none;
+    font-family: 'Roboto';
+    margin: 0%; padding: 0%;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear ;
+    list-style: none;
+}
+
+:root{
+    --orange:#ffa500;
+}
+::selection{
+    background-color: #ffa500;
+    color: #eee;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    transition: all .2s linear;
+}
+
+header{
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0%;right: 0%; left: 0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    height: 8rem;
+
+}
+header .logo{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #eee;
+    font-weight: bold;
+}
+header .logo span{
+    color: var(--orange);
+}
+header .navbar{
+    font-size: 2.5rem;
+}
+header #menu-bars{
+    display: none;
+}
+header .navbar a{
+    color: #eee;
+    margin:0 1rem;
+}
+
+header .navbar a:hover {
+    color: #ffa500;
+}
+header .icons{
+    font-size: 2.5rem;
+    color: #eee;
+    cursor: pointer;
+}
+header .icons i {
+    padding: 1rem;
+}
+header .icons i:hover{
+    color: #ffa500;
+}
+header .search-form{
+    position: absolute;
+    top: 100%; right:0; left: 0;
+    display: flex;
+    align-items: center;
+    padding: 2rem 2rem;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 10001;
+    clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);  /* https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
+
+}
+header .search-form.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+}
+header .search-form #search-bar{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    border-radius: .5rem;
+}
+header .search-form label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+header .search-form label:hover{
+    color: #ffa500;
+}
+
+/* login form */
+/* start of login form */
+.login-container i{
+    font-size: 5rem;
+    color: #fff;
+    position: absolute;
+    right: 5rem; top: 10rem;
+    cursor: pointer;
+}
+.login-container i:hover{
+    color: #ffa500;
+}
+.login-container{
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    min-height: 100vh;
+    z-index: 10004;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0);
+}
+.login-container.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.login-container .login-form{
+    background-color: #fff;
+    min-height: 50vh;
+    width: 25%;
+    border-radius: .5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.login-container .login-form h3{
+    font-size: 4rem;
+    margin: 4rem;
+    text-transform: uppercase;
+    color: #ffa500;
+
+}
+
+.login-container .login-form input{
+    width: 80%;
+    margin: .5rem;
+    padding: 1.4rem;
+    font-size: 1.7rme;
+    border-radius: .3rem;
+    border: 1px solid rgba(0, 0, 0, .3);
+    text-transform: none;
+}
+.login-container .login-form input::focus{
+    border-color: #ffa500 !important;
+}
+
+.btn{
+    color: #fff;
+    background-color: #ffa806;
+    border-color:#ffa500 !important;
+    font-size: 2rem;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn:hover{
+    opacity: .7;
+    background-color: rgba(255, 168, 6, .1);
+    border-color: #ffa500;
+    color: #333;
+}
+
+.login-form div{
+    display: flex;
+    margin-top: 1rem;
+    width: 80%;
+    justify-content: left;
+}
+
+#remember{
+    width: 2rem;
+    margin-right: .2rem;
+    display: inline-flex;
+    cursor: pointer;
+
+}
+.login-form div label{
+    margin: 0;
+    font-size: 1.5rem;
+    margin-top: .25rem;
+    margin-bottom: 2rem;
+}
+
+.login-form .sign-in {
+    margin-top: 3rem;
+    display: block;
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+}
+
+.login-form .sign-in a{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #ffa500;
+}
+
+
+/* end of login form */
+
+/* home section */
+.home-section{
+    position: relative;
+    top: 8rem;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home-section div{
+    padding-top: 38rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-section div h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-shadow: .2rem .5rem rgba(0, 0, 0, .4);
+}
+.home-section div p{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.home-section div .btn{
+    width: 20rem;
+    height: 5rem;
+}
+.home-section div .btn:hover{
+    opacity: .5;
+    color: rgba(0, 0, 0, .7);
+}
+
+.home-section .controls{
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 6rem;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 2rem;
+}
+.home-section .controls .vid-class{
+    background-color: #fff;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin:0 .2rem;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.home-section .controls .vid-class.active{
+    background-color: #ffa806;
+}
+
+.home-section .video-wrapper video{
+    position: absolute;
+    top: 0; right: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.booking{
+    width: 100%;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1500px){
+    html{
+        font-size: 57%;
+    }
+    .login-container .login-form{
+        width: 35%;
+    }
+}
+
+@media(max-width:1100px){
+    html{
+        font-size: 50%;
+    }
+    .login-container .login-form{
+        width: 40%;
+    }
+}
+
+@media(max-width:900px){
+    html{
+        font-size: 45%;
+    }
+    .login-container .login-form{
+        width: 50%;
+        min-height: 45vh;
+    }
+    .login-form div label{
+        margin-top: .6rem;
+        margin-left: .5rem;
+    }
+    header .navber a{
+        margin: 0 .5rem;
+    }
+}
+
+
+@media(max-width:700px){
+    html{
+        font-size: 62.5%;
+    }
+    .login-container .login-form{
+        width: 78%;
+        min-height: 40vh;
+    }
+    header .logo{
+        font-size: 5rem;
+        text-align: center;
+
+    }   
+    header .icons{
+        margin-right: 2rem;
+    }
+    header .logo{
+        margin: 0 auto;
+    }
+
+    .header .navbar{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top:8rem;left: 0;right: 0;
+        background-color: rgba(0, 0, 0, .5);
+        margin-bottom: 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header #menu-bars{
+        display: inline;
+        font-size: 3rem;
+        color: #fff;
+        margin-left: 3rem;
+    }
+
+    .header .navbar a{
+        margin:.3rem 2rem;
+        background-color: rgba(0, 0, 0, .6);
+        border-radius: .4rem;
+        padding: .5rem .7rem;
+
+    }
+    .home-section div h1 {
+        font-size: 3.2rem;
+    }
+    .home-section div p{
+        font-size: 2rem;
+    }
+
+
+}
+
+@media(max-width:500px){
+    html{
+        font-size: 42%;
+    }
+}
