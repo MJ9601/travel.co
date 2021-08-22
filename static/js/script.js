@@ -43,3 +43,53 @@ videoBtn.forEach( (element) =>{
         videoSrc.src = element.getAttribute('data-src');
     });
 })
+
+var swiper = new Swiper(".wrapper", {
+    spaceBetween: 15,
+    loop:true,
+    autoplay:{
+        delay:2500,
+        disableOnInteraction:false,
+    },
+    breakpoints: {
+        640:{
+            slidesPerView:1,
+        },
+        768:{
+            slidesPerView:2,
+            spaceBetween:20,
+        },
+        1500:{
+            spaceBetween:25,
+            slidesPerView:3,
+        },
+
+    }
+});
+
+var swiper = new Swiper(".brand-wrapper", {
+    spaceBetween: 15,
+    loop:true,
+    autoplay:{
+        delay:2500,
+        disableOnInteraction:false,
+    },
+    breakpoints: {
+        300:{
+            slidesPerView:2,
+        },
+        500:{
+            slidesPerView:3,
+            spaceBetween:20,
+        },
+        1100:{
+            spaceBetween:25,
+            slidesPerView:4,
+        },
+        1500:{
+            spaceBetween:25,
+            slidesPerView:5,
+        },
+
+    }
+});
